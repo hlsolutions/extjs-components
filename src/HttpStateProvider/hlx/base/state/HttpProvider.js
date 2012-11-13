@@ -125,7 +125,7 @@ Ext.define('hlx.base.state.HttpProvider', {
     },
 
     get: function (name, defaultValue) {
-        var me = this, pos = me.store.find('name', name), row, value;
+        var me = this, pos = me.store.findExact('name', name), row, value;
         if (pos > -1) {
             row = me.store.getAt(pos);
             value = me.decodeValue(row.get('value'));
